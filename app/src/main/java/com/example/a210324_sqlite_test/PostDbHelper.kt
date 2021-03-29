@@ -9,7 +9,7 @@ class PostDbHelper(context:Context) : SQLiteOpenHelper(context, DATABASE_NAME, n
 
     override fun onCreate(db: SQLiteDatabase?) {
         val createSql = CREATE_SQL_VER3
-        db?.execsql(createSql)
+        db?.execSQL(createSql)
     }
 
     //데이터베이스에 버전이 오른 경우 호출된다.

@@ -8,9 +8,10 @@
     app:cardConrnerRadius="4dp"
     app:cardUseCompatPadding="true">
 
-    <android.support.contraint.ContraintLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent">
+
 
         <TextView
             android:text="제목"
@@ -43,7 +44,7 @@
             app:srcCompat="@android:drawable/ic_menu_edit"
             android:id="@+id/editButton"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margineEnd="8dp"
+            android:layout_marginEnd="8dp"
             app:layout_congraintVertical_chainStyle="packed"
             app:layout_contraintBotton_toTopOf="@+id/deleteButton"
             android:layout_marginTop="8dp"
@@ -55,7 +56,7 @@
             app:srcCompat="@android:drawable/ic_menu_delete"
             android:id="@+id/deleteButton"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margineEnd="8dp"
+            android:layout_marginEnd="8dp"
             app:layout_contraintBotton_toBottomOf="parent"
             app:layout_contraintTop_toBottomOf="@+id/editButton"
             />
@@ -72,7 +73,9 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" />
 
+
     </android.support.constraint.ConstraintLayout>
+
 
 </android.support.v7.widget.CardView>
 

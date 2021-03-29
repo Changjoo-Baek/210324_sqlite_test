@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
                     editData(dataList[position].get("id").toString(), title, post)
                     updateRecyclerView()
                 }
-                dialog.show(supportFragmentManager."dialog")
+                dialog.show(supportFragmentManager, "dialog")
             }
         }
     }
@@ -127,7 +127,7 @@ class MainActivity : AppCompatActivity() {
                 resultList.add(map)
             } while (cursor.moveToNext())
         }
-        return result
+        return resultList
     }
 
     // 데이터 삭제
@@ -145,35 +145,4 @@ class MainActivity : AppCompatActivity() {
             "UPDATE post set title = '$(title)', post = '${post}', time = CURRUENT_TIMESTAMP where id = ${id}"
         dbHelper.writableDatabase.execSQL(sql)
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
